@@ -14,6 +14,7 @@ public class Player_Health : MonoBehaviour
 		if (playerHealth <= 0)
         {
             print("Died");
+            Time.timeScale = 0;
         }
 	}
 

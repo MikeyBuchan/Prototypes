@@ -7,10 +7,6 @@ public class Player_Movement : MonoBehaviour
     public float speed;
     private Vector2 mv;
 
-	void Start () 
-	{
-		
-	}
 	
 
 	void FixedUpdate () 
