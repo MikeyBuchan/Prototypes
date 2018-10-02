@@ -7,6 +7,9 @@ TagManager:
   - Enemy1
   - Gun
   - GunBarrel
+  - Floor
+  - Wall
+  - Death Panel
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Player
   - 
   - 
   - 

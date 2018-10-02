@@ -20,4 +20,14 @@ public class Player_Movement : MonoBehaviour
 
         transform.Translate(vectorSelf * movementSpeed * Time.deltaTime);
     }
+
+    void OnCollisionEnter(Collision c)
+    {
+        if (c.transform.tag == "Enemy1")
+        {
+            transform.GetComponent<Player_Shoot>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
 }
