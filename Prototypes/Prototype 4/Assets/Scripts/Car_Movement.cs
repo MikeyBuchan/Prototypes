@@ -22,22 +22,22 @@ public void CarMovement()
     {
         if (Input.GetButton("W"))
         {
-            rb.AddForce(transform.forward * speed * Time.deltaTime);
+            rb.AddForce(transform.forward * speed * Time.fixedDeltaTime);
         }
 
         if (Input.GetButton("A"))
         {
-            transform.Rotate(0, -steeringSpeed, 0 * Time.deltaTime);
+            transform.Rotate(0, -steeringSpeed, 0 * Time.fixedDeltaTime);
         }
 
         if (Input.GetButton("S"))
         {
-            rb.AddForce(-transform.forward * speed * Time.deltaTime);
+            rb.AddForce(-transform.forward * speed * Time.fixedDeltaTime);
         }
 
         if (Input.GetButton("D"))
         {
-            transform.Rotate(0, steeringSpeed, 0 * Time.deltaTime);
+            transform.Rotate(0, steeringSpeed, 0 * Time.fixedDeltaTime);
         }
     }
 }
