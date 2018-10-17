@@ -15,6 +15,7 @@ public class ClickManager : MonoBehaviour
     public Text upgradeCost3Text;
     public Text upgradeCost4Text;
     public Text upgradeCost5Text;
+    public Text clickUpgradeText;
 
     [Header("Ints")]
     public int totalMoneyInt;
@@ -27,6 +28,7 @@ public class ClickManager : MonoBehaviour
     public int upgradeCost3;
     public int upgradeCost4;
     public int upgradeCost5;
+    public int clickUpgradeCost;
 
     [Header("Upgrade Amounts")]
     public int upgradeAmount1;
@@ -34,6 +36,7 @@ public class ClickManager : MonoBehaviour
     public int upgradeAmount3;
     public int upgradeAmount4;
     public int upgradeAmount5;
+
 
     [Header("Floats")]
     [SerializeField] float currentTime;
@@ -51,6 +54,7 @@ public class ClickManager : MonoBehaviour
         upgradeCost3Text.text = ("Cost: ") + upgradeCost3 + (" Money").ToString();
         upgradeCost4Text.text = ("Cost: ") + upgradeCost4 + (" Money").ToString();
         upgradeCost5Text.text = ("Cost: ") + upgradeCost5 + (" Money").ToString();
+        clickUpgradeText.text = ("Cost: ") + clickUpgradeCost + (" Money").ToString();
     }
 
     private void Update()
@@ -94,7 +98,7 @@ public class ClickManager : MonoBehaviour
             moneyPerSecond += upgradeAmount1;
             totalMoneyInt -= upgradeCost1;
 
-            upgradeCost1 = Mathf.RoundToInt(upgradeCost1 * 1.4f);
+            upgradeCost1 = Mathf.RoundToInt(upgradeCost1 * 1.2f);
 
             upgradeCost1Text.text = ("Cost: ") + upgradeCost1 + (" Money").ToString();
 
@@ -115,7 +119,7 @@ public class ClickManager : MonoBehaviour
             moneyPerSecond += upgradeAmount2;
             totalMoneyInt -= upgradeCost2;
 
-            upgradeCost2 = Mathf.RoundToInt(upgradeCost2 * 1.4f);
+            upgradeCost2 = Mathf.RoundToInt(upgradeCost2 * 1.5f);
 
             upgradeCost2Text.text = ("Cost: ") + upgradeCost2 + (" Money").ToString();
 
@@ -135,7 +139,7 @@ public class ClickManager : MonoBehaviour
             moneyPerSecond += upgradeAmount3;
             totalMoneyInt -= upgradeCost3;
 
-            upgradeCost3 = Mathf.RoundToInt(upgradeCost3 * 1.4f);
+            upgradeCost3 = Mathf.RoundToInt(upgradeCost3 * 1.8f);
 
             upgradeCost3Text.text = ("Cost: ") + upgradeCost3 + (" Money").ToString();
 
@@ -155,7 +159,7 @@ public class ClickManager : MonoBehaviour
             moneyPerSecond += upgradeAmount4;
             totalMoneyInt -= upgradeCost4;
 
-            upgradeCost4 = Mathf.RoundToInt(upgradeCost4 * 1.4f);
+            upgradeCost4 = Mathf.RoundToInt(upgradeCost4 * 2.1f);
 
             upgradeCost4Text.text = ("Cost: ") + upgradeCost4 + (" Money").ToString();
 
@@ -175,12 +179,31 @@ public class ClickManager : MonoBehaviour
             moneyPerSecond += upgradeAmount5;
             totalMoneyInt -= upgradeCost5;
 
-            upgradeCost5 = Mathf.RoundToInt(upgradeCost5 * 1.4f);
+            upgradeCost5 = Mathf.RoundToInt(upgradeCost5 * 2.7f);
 
             upgradeCost5Text.text = ("Cost: ") + upgradeCost5 + (" Money").ToString();
 
             totalMoney.text = totalMoneyInt + (" Money").ToString();
             moneyPerSecondText.text = moneyPerSecond + (" Money per second").ToString();
+        }
+        else
+        {
+            print("Not enough money");
+        }
+    }
+
+    public void ClickUpgrade()
+    {
+        if (totalMoneyInt >= clickUpgradeCost)
+        {
+            plusClickAmount *= 2;
+            totalMoneyInt -= clickUpgradeCost;
+
+            clickUpgradeCost = Mathf.RoundToInt(clickUpgradeCost * 3.5f);
+
+            clickUpgradeText.text = ("Cost: ") + clickUpgradeCost + (" Money").ToString();
+
+            totalMoney.text = totalMoneyInt + (" Money").ToString();
         }
         else
         {
