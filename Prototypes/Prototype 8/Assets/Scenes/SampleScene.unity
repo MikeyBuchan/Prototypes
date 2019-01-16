@@ -157,6 +157,81 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &32813689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 32813690}
+  - component: {fileID: 32813692}
+  - component: {fileID: 32813691}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &32813690
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32813689}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 63929273}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 30.3, y: 0.000061035156}
+  m_SizeDelta: {x: 318.1, y: 107.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &32813691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32813689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 51
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 51
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Infected: 0'
+--- !u!222 &32813692
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32813689}
+  m_CullTransparentMesh: 0
 --- !u!1001 &37055376
 Prefab:
   m_ObjectHideFlags: 0
@@ -199,6 +274,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -325,6 +405,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4413321757595268, guid: 804ac1c6e2cec2c46831e153bc753131,
     type: 2}
   m_PrefabInternal: {fileID: 53550714}
+--- !u!1 &63929272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63929273}
+  - component: {fileID: 63929275}
+  - component: {fileID: 63929274}
+  m_Layer: 5
+  m_Name: Infected Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &63929273
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63929272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 32813690}
+  m_Father: {fileID: 2033921631}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -801.4, y: 486.05}
+  m_SizeDelta: {x: -1602.7, y: -972.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &63929274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63929272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.35686275}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &63929275
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63929272}
+  m_CullTransparentMesh: 0
 --- !u!1001 &76384320
 Prefab:
   m_ObjectHideFlags: 0
@@ -426,6 +576,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -545,6 +700,100 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4079695724954246, guid: e213f5bf30137bf4d90c73e01aa8e0d1,
     type: 2}
   m_PrefabInternal: {fileID: 139603317}
+--- !u!1 &142600955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142600959}
+  - component: {fileID: 142600958}
+  - component: {fileID: 142600957}
+  - component: {fileID: 142600956}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &142600956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142600955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &142600957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142600955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &142600958
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142600955}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &142600959
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142600955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 2033921631}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 45, y: -30, z: 0}
 --- !u!4 &190630746 stripped
 Transform:
@@ -648,7 +897,7 @@ Transform:
   - {fileID: 1787123562}
   - {fileID: 401949842}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &210660771 stripped
 Transform:
@@ -990,6 +1239,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -1150,6 +1404,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4016757155515360, guid: 751627e3a5e1ca04087690e29d164919,
     type: 2}
   m_PrefabInternal: {fileID: 308908718}
+--- !u!1 &308954910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 308954911}
+  - component: {fileID: 308954912}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &308954911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308954910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &308954912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308954910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1932a2e18317d245a030c4df3cdf384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infectedText: {fileID: 32813691}
+  civsparent: {fileID: 1238072862}
+  amountInfected: 0
+  civs: []
 --- !u!1001 &317647809
 Prefab:
   m_ObjectHideFlags: 0
@@ -1316,6 +1614,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -1545,6 +1848,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -1595,6 +1903,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -1661,7 +1974,7 @@ Transform:
   - {fileID: 1152977155}
   - {fileID: 1809130086}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &475097278
 Prefab:
@@ -1705,6 +2018,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -2154,6 +2472,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -2322,6 +2645,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -2367,6 +2695,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -2419,6 +2752,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -2469,6 +2807,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -2641,6 +2984,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -2687,6 +3035,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -2732,6 +3085,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -2850,7 +3208,7 @@ Transform:
   - {fileID: 1040536997}
   - {fileID: 1638594873}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &857258435 stripped
 Transform:
@@ -2966,6 +3324,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -3185,6 +3548,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -3352,6 +3720,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -3397,6 +3770,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -3498,6 +3876,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -3821,6 +4204,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -3913,6 +4301,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -4011,6 +4404,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -4081,7 +4479,7 @@ Transform:
   - {fileID: 1226207206}
   - {fileID: 1267618180}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1239420258
 Prefab:
@@ -4347,6 +4745,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -4433,7 +4836,7 @@ Transform:
   - {fileID: 10594692}
   - {fileID: 1549752877}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1356605469
 Prefab:
@@ -4528,6 +4931,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -4635,6 +5043,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -4663,7 +5076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4931809440862546, guid: 149bad26111d27e48aaf0e35a7ac2ff5, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4931809440862546, guid: 149bad26111d27e48aaf0e35a7ac2ff5, type: 2}
       propertyPath: m_LocalRotation.z
@@ -4671,11 +5084,30 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4931809440862546, guid: 149bad26111d27e48aaf0e35a7ac2ff5, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4931809440862546, guid: 149bad26111d27e48aaf0e35a7ac2ff5, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114019894791066830, guid: 149bad26111d27e48aaf0e35a7ac2ff5,
+        type: 2}
+      propertyPath: sickColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 02e812c8fe4f4fa47aa4ba60760595c4, type: 2}
+    - target: {fileID: 114019894791066830, guid: 149bad26111d27e48aaf0e35a7ac2ff5,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 308954910}
+    - target: {fileID: 114722644368183786, guid: 149bad26111d27e48aaf0e35a7ac2ff5,
+        type: 2}
+      propertyPath: movementSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931809440862546, guid: 149bad26111d27e48aaf0e35a7ac2ff5, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149bad26111d27e48aaf0e35a7ac2ff5, type: 2}
@@ -5011,6 +5443,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -5116,6 +5553,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -5355,6 +5797,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -5480,6 +5927,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4557418922162664, guid: 1a8e9dc0637dbf44ca1821471d74d808,
     type: 2}
   m_PrefabInternal: {fileID: 1562469888}
+--- !u!1 &1565850436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565850439}
+  - component: {fileID: 1565850438}
+  - component: {fileID: 1565850437}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1565850437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565850436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1565850438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565850436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1565850439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565850436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1585688130
 Prefab:
   m_ObjectHideFlags: 0
@@ -5692,6 +6201,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -6042,6 +6556,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -6087,6 +6606,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -6244,6 +6768,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -6353,6 +6882,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -6398,6 +6932,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -6798,6 +7337,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -6921,6 +7465,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4032764402586858, guid: 798adb354b7a2744db779470a65f1346,
     type: 2}
   m_PrefabInternal: {fileID: 708966472}
+--- !u!1 &2033921630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033921631}
+  - component: {fileID: 2033921633}
+  - component: {fileID: 2033921632}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2033921631
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2033921630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 63929273}
+  - {fileID: 2106423132}
+  m_Father: {fileID: 142600959}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2033921632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2033921630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2033921633
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2033921630}
+  m_CullTransparentMesh: 0
 --- !u!1001 &2036893112
 Prefab:
   m_ObjectHideFlags: 0
@@ -6963,6 +7578,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -7010,6 +7630,11 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
@@ -7055,6 +7680,11 @@ Prefab:
     - target: {fileID: 1626130398741868, guid: 798adb354b7a2744db779470a65f1346, type: 2}
       propertyPath: m_Name
       value: Civilian (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
@@ -7102,9 +7732,83 @@ Prefab:
       propertyPath: m_Name
       value: Civilian (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 114850581793445436, guid: 798adb354b7a2744db779470a65f1346,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798adb354b7a2744db779470a65f1346, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2106423131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106423132}
+  - component: {fileID: 2106423134}
+  - component: {fileID: 2106423133}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2106423132
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2106423131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033921631}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2106423133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2106423131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2106423134
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2106423131}
+  m_CullTransparentMesh: 0
 --- !u!4 &2108004337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4032764402586858, guid: 798adb354b7a2744db779470a65f1346,
